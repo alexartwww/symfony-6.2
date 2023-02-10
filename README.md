@@ -36,14 +36,14 @@ cd ./symfony-test
 cp ./.env.dev ./.env
 ver=1.0.0 make build up
 sleep 10
-ver=1.0.0 make restore
+ver=1.0.0 make restore migrate fixtures
 ```
 
 ### Checking
 
-Open http://localhost:10000/ You should see Hello world! and current datetime.
+Open http://localhost:11000/ You should see Hello world! and current datetime.
 
-Open `./tests/requests.http` and play with API
+Open `./requests.http` and play with API
 
 ### Developing
 

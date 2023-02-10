@@ -52,7 +52,7 @@ COPY --chown=www-data:www-data . .
 
 # COMPOSER
 USER www-data
-#RUN composer install --no-ansi
+RUN composer install --no-ansi
 
 USER root
 

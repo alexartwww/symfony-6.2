@@ -5,6 +5,7 @@ namespace Alexartwww\Symfony\Entity;
 use Alexartwww\Symfony\Repository\PriceRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\UniqueConstraint;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: PriceRepository::class)]
 #[UniqueConstraint(name: "product_variant_currency", fields: ["product", "variant", "currency"])]
@@ -42,6 +43,7 @@ class Price
         precision: 10,
         scale: 2
     )]
+    #[Assert\Positive]
     private ?float $price;
 
     public function getId(): ?int

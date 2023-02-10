@@ -10,7 +10,8 @@
 ###< symfony/framework-bundle ###
 
 .idea
-.env
 .docker/services/mysql/data
 .docker/services/mysql/files
 .docker/backups
+.docker/logs
+.env

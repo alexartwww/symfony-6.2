@@ -101,6 +101,8 @@ class PricesController
             ], 400, ['Content-Type' => 'application/json']);
         }
 
+
+
         $price = new Price();
         $price->setProduct($product);
         $price->setVariant($body["variant"]);

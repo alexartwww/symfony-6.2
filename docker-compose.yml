@@ -13,9 +13,9 @@ services:
     image: symfony-6.2:${ver}
     user: "1000:1000"
     command: [ "echo", "Symfony" ]
-    volumes:
-      - .:/var/www/src
-      - ./.docker/php:/etc/php
+#    volumes:
+#      - .:/var/www/src
+#      - ./.docker/php:/etc/php
     environment:
       - MYSQL_HOST=${MYSQL_HOST}
       - MYSQL_DB=${MYSQL_DB}
@@ -26,8 +26,8 @@ services:
   php-fpm:
     image: symfony-6.2:${ver}
     volumes:
-      - .:/var/www/src
-      - ./.docker/php:/etc/php
+#      - .:/var/www/src
+#      - ./.docker/php:/etc/php
       - ./.docker/logs:/var/log/php
     restart: ${PHP_FPM_RESTART}
     environment:
